@@ -1,0 +1,89 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+// * {
+//   padding: ;
+// }
+
+body {
+  font-family: $avenir-font-family;
+  color: $black1;
+  border: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $avenir-font-family;
+  font-size: $headerfont-mobile;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+
+  //   &__logo {
+
+  //     }
+  &__img {
+    height: 40px;
+    width: 135px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 16px;
+  }
+  &__search {
+    color: $silver1;
+  }
+  //   &__searchbar {
+  //     height: 40px;
+  //     width: 210px;
+  //   }
+  &__icon {
+    padding-left: 16px;
+  }
+  &__image {
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+  }
+  &__uploadbutton {
+    background-color: $blue1;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 270px;
+    color: $white1;
+    font-weight: $font1;
+  }
+}
+
+input[type="text"] {
+  height: 40px;
+  width: 210px;
+  color: $silver1;
+}
