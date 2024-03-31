@@ -1,0 +1,48 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.comment-section {
+  &__count {
+    font-weight: 600;
+  }
+  &__wrapper {
+  }
+  &__image {
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+  }
+  &__form {
+  }
+  &__title {
+    font-weight: 700;
+  }
+  &__container {
+  }
+  &__commentform {
+  }
+  &__btn {
+  }
+  &__commentlist {
+  }
+  &__selectedcomments {
+    border-bottom: 1px solid $silver2;
+  }
+  &__userpic {
+  }
+  &__placeholder {
+  }
+  &__commentinfo {
+  }
+  &__headerinfo {
+  }
+  &__username {
+    font-weight: 600;
+  }
+  &__date {
+    color: $silver1;
+  }
+  &__text {
+  }
+}
