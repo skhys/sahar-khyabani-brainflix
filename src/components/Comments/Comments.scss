@@ -7,35 +7,70 @@
     font-weight: 600;
   }
   &__wrapper {
+    display: flex;
+    justify-content: space-evenly;
   }
   &__image {
     border-radius: 50%;
     height: 36px;
     width: 36px;
+    padding: 10px;
   }
   &__form {
   }
   &__title {
     font-weight: 700;
+    color: $silver1;
+    margin: 0;
   }
   &__container {
+    padding-bottom: 16px;
   }
   &__commentform {
+    width: 250px;
+    height: 100px;
+    border-radius: 4px;
+    border: 1px solid $silver1;
   }
   &__btn {
+    height: 40px;
+    width: 250px;
+    border-radius: 4px;
+    border: none;
+    color: $white1;
+    background-image: url(../../assets/Images/Icons/add_comment.svg);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-color: $blue1;
   }
   &__commentlist {
   }
   &__selectedcomments {
+    display: flex;
     border-bottom: 1px solid $silver2;
+    padding: 16px;
   }
   &__userpic {
   }
   &__placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__avatar {
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    padding: 10px;
   }
   &__commentinfo {
   }
   &__headerinfo {
+    display: flex;
+    justify-content: space-between;
   }
   &__username {
     font-weight: 600;

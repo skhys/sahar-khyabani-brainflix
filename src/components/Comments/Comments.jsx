@@ -1,6 +1,7 @@
 import React from "react";
 import "./Comments.scss";
 import circleImg from "../../assets/Images/Mohan-muruge.jpg";
+import defaultAvatar from "../../assets/Images/defaultAvatar.png";
 
 function MainComment({ selectedComment }) {
   const organizeComments = selectedComment.comments.sort(
@@ -45,7 +46,13 @@ function MainComment({ selectedComment }) {
                 alt="user image"
               />
             ) : (
-              <div className="comment-section__placeholder"></div>
+              <div className="comment-section__placeholder">
+                <img
+                  className="comment-section__avatar"
+                  src={defaultAvatar}
+                  alt="default avatar"
+                />
+              </div>
             )}
             <div className="comment-section__commentinfo">
               <div className="comment-section__headerinfo">
