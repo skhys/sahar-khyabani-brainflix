@@ -4,17 +4,6 @@ import ViewsImg from "../../assets/Images/Icons/views.svg";
 import LikesImg from "../../assets/Images/Icons/likes.svg";
 
 function MainVideo({ selectedVid }) {
-  // DELETE:
-  //   console.log(selectedVid);
-  //   console.log(selectedVid.image);
-  //   console.log(selectedVid.video);
-  //   console.log(selectedVid.title);
-  //   console.log(selectedVid.title);
-  //   console.log(selectedVid.timestamp);
-  //   console.log(selectedVid.views);
-  //   console.log(selectedVid.likes);
-  //   console.log(selectedVid.description);
-
   const date = new Date(selectedVid.timestamp);
   const formattedDate = `${date.toLocaleDateString()}`;
 

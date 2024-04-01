@@ -72,10 +72,11 @@ ol {
   &__search {
     color: $silver1;
   }
-  //   &__searchbar {
-  //     height: 40px;
-  //     width: 210px;
-  //   }
+  &__searchbar {
+    background-image: url(../../assets/Images/Icons/search.svg);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+  }
   &__icon {
     padding-left: 16px;
   }
@@ -131,4 +132,8 @@ input[type="text"] {
   height: 40px;
   width: 210px;
   color: $silver1;
+}
+
+input[placeholder="Search"] {
+  padding-left: 30px;
 }

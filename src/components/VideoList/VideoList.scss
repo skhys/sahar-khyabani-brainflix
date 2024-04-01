@@ -1,0 +1,51 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.video-list {
+  &__headertitle {
+    color: $silver1;
+    font-size: 13px;
+    padding: 16px;
+    margin: 0;
+  }
+  &__details {
+    padding: 16px;
+    @include tablet {
+      padding: 24px;
+    }
+  }
+  &__item {
+    display: flex;
+  }
+  &__thumbnail {
+    height: 80px;
+    width: 130px;
+    padding-bottom: 16px;
+    border-radius: 4px;
+    @include tablet {
+      height: 100px;
+      width: 160px;
+      padding-bottom: 24px;
+    }
+  }
+  //   &__wrapper {
+  //   }
+  &__vidtitle {
+    font-size: 13px;
+    padding-left: 16px;
+    margin-top: 0;
+    @include tablet {
+      font-size: 16px;
+      margin-top: 0;
+    }
+  }
+  &__author {
+    font-size: 13px;
+    padding-left: 16px;
+    @include tablet {
+      font-size: 16px;
+      margin-top: 0;
+    }
+  }
+}
