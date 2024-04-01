@@ -8,7 +8,7 @@ function VideoList(props) {
   );
 
   return (
-    <div className="video-list-container">
+    <div className="video-list__container">
       <h1 className="video-list__headertitle">NEXT VIDEOS</h1>
       <div className="video-list__details">
         {filteredVideos.map((video) => (

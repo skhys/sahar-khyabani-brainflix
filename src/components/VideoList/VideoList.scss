@@ -3,6 +3,11 @@
 @use "../../styles/partials/typography" as *;
 
 .video-list {
+  &__container {
+    @include desktop {
+      border-left: 1px solid $silver2;
+    }
+  }
   &__headertitle {
     color: $silver1;
     font-size: 13px;

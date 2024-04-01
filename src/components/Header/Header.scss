@@ -94,6 +94,7 @@ ol {
     width: 270px;
     color: $white1;
     font-weight: $font1;
+    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     @include tablet {
       height: 40px;
@@ -117,11 +118,11 @@ ol {
 }
 
 .header__uploadbutton:hover {
-  background-color: $blue2;
+  background-color: $blue1;
 }
 
 .header__uploadbutton:active {
-  background-color: $blue1;
+  background-color: $blue2;
 }
 
 input[type="text"] {

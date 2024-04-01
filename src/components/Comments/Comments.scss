@@ -79,6 +79,8 @@
     background-repeat: no-repeat;
     background-position: 10px center;
     background-color: $blue1;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
     @include tablet {
       width: 190px;
       height: 40px;
@@ -103,6 +105,7 @@
       border-bottom: none;
       border-top: 1px solid $silver2;
       width: 100%;
+      padding-left: 30px;
     }
   }
   &__userpic {
@@ -147,4 +150,12 @@
       font-size: 18px;
     }
   }
+}
+
+.comment-section__btn:hover {
+  background-color: $blue1;
+}
+
+.comment-section__btn:active {
+  background-color: $blue2;
 }
