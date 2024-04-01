@@ -4,6 +4,18 @@ import circleImg from "../../assets/Images/Mohan-muruge.jpg";
 import defaultAvatar from "../../assets/Images/defaultAvatar.png";
 
 function MainComment({ selectedComment }) {
+  if (
+    !selectedComment ||
+    !selectedComment.comments ||
+    selectedComment.comments.length === 0
+  ) {
+    return (
+      <div className="comment-section">
+        <p className="comment-section__count">No comments available</p>
+      </div>
+    );
+  }
+
   const organizeComments = selectedComment.comments.sort(
     (a, b) => b.timestamp - a.timestamp
   );
@@ -37,7 +49,7 @@ function MainComment({ selectedComment }) {
       </div>
 
       <div className="comment-section__commentlist">
-        {selectedComment.comments.map((comment) => (
+        {organizeComments.map((comment) => (
           <div key={comment.id} className="comment-section__selectedcomments">
             {comment.image ? (
               <img

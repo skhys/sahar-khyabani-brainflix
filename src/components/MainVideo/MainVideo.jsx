@@ -3,8 +3,8 @@ import "./MainVideo.scss";
 import ViewsImg from "../../assets/Images/Icons/views.svg";
 import LikesImg from "../../assets/Images/Icons/likes.svg";
 
-function MainVideo({ selectedVid }) {
-  const date = new Date(selectedVid.timestamp);
+function MainVideo({ selectedVideo }) {
+  const date = new Date(selectedVideo.timestamp);
   const formattedDate = `${date.toLocaleDateString()}`;
 
   return (
@@ -14,30 +14,38 @@ function MainVideo({ selectedVid }) {
           <video
             className="main-video__thumbnail"
             controls
-            poster={selectedVid.image}
+            poster={selectedVideo.image}
           >
-            <source src={selectedVid.video} />
+            <source src={selectedVideo.video} />
           </video>
         </div>
-        <h2 className="main-video__title">{selectedVid.title}</h2>
+        <h2 className="main-video__title">{selectedVideo.title}</h2>
         <div className="main-video__wrapper">
           <div className="main-video__detail">
-            <p className="main-video__author">By {selectedVid.channel}</p>
+            <p className="main-video__author">By {selectedVideo.channel}</p>
             <p className="main-video__date">{formattedDate}</p>
           </div>
           <div className="main-video__item">
             <div className="main-video__views">
-              <img className="main-video__viewsicon" src={ViewsImg}></img>
-              <p className="main-video__date">{selectedVid.views}</p>
+              <img
+                className="main-video__viewsicon"
+                src={ViewsImg}
+                alt="Views Icon"
+              />
+              <p className="main-video__date">{selectedVideo.views}</p>
             </div>
             <div className="main-video__likes">
-              <img className="main-video__likesicon" src={LikesImg}></img>
-              <p className="main-video__likestext">{selectedVid.likes}</p>
+              <img
+                className="main-video__likesicon"
+                src={LikesImg}
+                alt="Likes Icon"
+              />
+              <p className="main-video__likestext">{selectedVideo.likes}</p>
             </div>
           </div>
         </div>
       </div>
-      <p className="main-video__description">{selectedVid.description}</p>
+      <p className="main-video__description">{selectedVideo.description}</p>
     </>
   );
 }

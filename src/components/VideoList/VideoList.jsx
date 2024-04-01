@@ -1,24 +1,23 @@
-import { useState } from "react";
-import React from "react";
 import "./VideoList.scss";
 import videosData from "../../data/videos.json";
 
-function VideoList({ selectedVid }) {
-  const [mainVideo, setMainVideo] = useState(null);
-
-  const handleVideoClick = (video) => {
-    setMainVideo(video);
-  };
+function VideoList(props) {
+  const { videosData, selectedVideo, onChangeVideo } = props;
+  const filteredVideos = videosData.filter(
+    (video) => video.id !== selectedVideo.id
+  );
 
   return (
     <div className="video-list-container">
       <h1 className="video-list__headertitle">NEXT VIDEOS</h1>
       <div className="video-list__details">
-        {videosData.slice(1).map((video) => (
+        {filteredVideos.map((video) => (
           <div
             key={video.id}
             className="video-list__item"
-            onClick={() => handleVideoClick(video)}
+            onClick={() => {
+              onChangeVideo(video.id);
+            }}
           >
             <img
               src={video.image}

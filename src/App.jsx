@@ -7,15 +7,25 @@ import MainComment from "./components/Comments/Comments";
 import VideoList from "./components/VideoList/VideoList";
 
 function App() {
-  const [selectedVid, setSelectedVid] = useState(VideoDetails[0]);
-  const [selectedVideo, setSelectedVideo] = useState(null);
-  console.log(VideoDetails[0]);
+  const [selectedVideo, setSelectedVideo] = useState(VideoDetails[0]);
+
+  const onChangeVideo = (videoId) => {
+    const foundVideo = VideoDetails.find((video) => {
+      return video.id === videoId;
+    });
+    setSelectedVideo(foundVideo);
+  };
+
   return (
     <>
       <Header />
-      <MainVideo selectedVid={selectedVid} />
-      <MainComment selectedComment={selectedVid} />
-      <VideoList selectedVideo={selectedVid} />
+      <MainVideo selectedVideo={selectedVideo} />
+      <MainComment selectedComment={selectedVideo} />
+      <VideoList
+        videosData={VideoDetails}
+        selectedVideo={selectedVideo}
+        onChangeVideo={onChangeVideo}
+      />
     </>
   );
 }
