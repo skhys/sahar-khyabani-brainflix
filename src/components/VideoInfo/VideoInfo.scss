@@ -10,6 +10,8 @@
     font-weight: 700;
     @include tablet {
       font-size: 33px;
+      border-bottom: none;
+      margin-bottom: 0;
     }
   }
   &__wrapper {
@@ -21,17 +23,24 @@
     }
   }
   &__detail {
+    @include tablet {
+      display: flex;
+    }
   }
   &__author {
     font-weight: 700;
     margin: 0;
     padding-bottom: 16px;
+    margin-right: 16px;
   }
   &__date {
     margin: 0;
     padding-bottom: 16px;
   }
   &__item {
+    @include tablet {
+      display: flex;
+    }
   }
   &__views {
     display: flex;
@@ -39,6 +48,7 @@
     color: $silver1;
     padding-bottom: 16px;
     @include tablet {
+      margin-right: 16px;
     }
   }
   &__viewsicon {
