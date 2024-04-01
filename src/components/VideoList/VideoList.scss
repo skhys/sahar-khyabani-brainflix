@@ -37,6 +37,9 @@
       width: 160px;
       padding-bottom: 24px;
     }
+    @include desktop {
+      padding-bottom: 16px;
+    }
   }
   //   &__wrapper {
   //   }
