@@ -5,6 +5,9 @@
 .comment-section {
   &__count {
     font-weight: 600;
+    @include tablet {
+      padding-left: 16px;
+    }
   }
   &__wrapper {
     display: flex;

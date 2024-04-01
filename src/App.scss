@@ -1,0 +1,14 @@
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/typography" as *;
+@use "./styles/partials/variables" as *;
+
+.main-wrapper {
+  @include desktop {
+    display: flex;
+  }
+  &__info {
+    @include desktop {
+      padding: 24px;
+    }
+  }
+}

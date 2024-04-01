@@ -1,0 +1,73 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.video-info {
+  &__title {
+    border-bottom: 1px solid $silver2;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    font-weight: 700;
+    @include tablet {
+      font-size: 33px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $silver2;
+    justify-content: space-evenly;
+    @include tablet {
+    }
+  }
+  &__detail {
+  }
+  &__author {
+    font-weight: 700;
+    margin: 0;
+    padding-bottom: 16px;
+  }
+  &__date {
+    margin: 0;
+    padding-bottom: 16px;
+  }
+  &__item {
+  }
+  &__views {
+    display: flex;
+    flex-direction: row;
+    color: $silver1;
+    padding-bottom: 16px;
+    @include tablet {
+    }
+  }
+  &__viewsicon {
+    padding-right: 7px;
+  }
+  &__date {
+    color: $silver1;
+    padding: 0;
+  }
+  &__likes {
+    display: flex;
+    flex-direction: row;
+    color: $silver1;
+    padding-bottom: 16px;
+    @include tablet {
+    }
+  }
+  &__likesicon {
+    padding-right: 7px;
+  }
+  &__likestext {
+    margin: 0;
+  }
+  &__description {
+    padding: 16px;
+    margin: 0;
+    font-size: 13px;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+}
