@@ -13,6 +13,10 @@
     padding: 16px;
     @include tablet {
       padding: 24px;
+      width: 50%;
+    }
+    @include desktop {
+      width: 90%;
     }
   }
   &__item {

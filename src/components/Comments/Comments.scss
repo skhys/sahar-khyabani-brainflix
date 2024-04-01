@@ -13,6 +13,9 @@
   &__wrapper {
     justify-content: space-evenly;
     border-bottom: 1px solid $silver2;
+    @include desktop {
+      border-style: none;
+    }
   }
   &__groupdetails {
     display: flex;
@@ -95,6 +98,11 @@
     padding: 16px;
     @include tablet {
       width: 85%;
+    }
+    @include desktop {
+      border-bottom: none;
+      border-top: 1px solid $silver2;
+      width: 100%;
     }
   }
   &__userpic {
