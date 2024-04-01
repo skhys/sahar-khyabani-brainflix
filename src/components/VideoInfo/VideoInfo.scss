@@ -32,10 +32,16 @@
     margin: 0;
     padding-bottom: 16px;
     margin-right: 16px;
+    @include desktop {
+      font-size: 18px;
+    }
   }
   &__date {
     margin: 0;
     padding-bottom: 16px;
+    @include desktop {
+      font-size: 18px;
+    }
   }
   &__item {
     @include tablet {
@@ -71,13 +77,19 @@
   }
   &__likestext {
     margin: 0;
+    @include desktop {
+      font-size: 18px;
+    }
   }
   &__description {
     padding: 16px;
     margin: 0;
     font-size: 13px;
     @include tablet {
-      font-size: 14px;
+      font-size: 16px;
+    }
+    @include desktop {
+      font-size: 18px;
     }
   }
 }

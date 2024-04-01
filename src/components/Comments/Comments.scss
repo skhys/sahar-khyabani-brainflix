@@ -4,24 +4,41 @@
 
 .comment-section {
   &__count {
-    font-weight: 600;
+    font-weight: 700;
     padding-left: 16px;
     @include tablet {
       padding-left: 16px;
     }
   }
   &__wrapper {
-    display: flex;
     justify-content: space-evenly;
     border-bottom: 1px solid $silver2;
+  }
+  &__groupdetails {
+    display: flex;
+    flex-direction: row;
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__image {
     border-radius: 50%;
     height: 36px;
     width: 36px;
     padding: 10px;
+    @include tablet {
+      margin-top: 16px;
+    }
   }
   &__form {
+  }
+  &__groupitems {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
   &__title {
     font-weight: 700;
@@ -40,10 +57,14 @@
     @include tablet {
       width: 400px;
       height: 40px;
+      margin-right: 16px;
     }
   }
   &__btnwrapper {
     padding-top: 16px;
+    @include tablet {
+      padding-top: 0;
+    }
   }
   &__btn {
     height: 40px;
@@ -61,11 +82,20 @@
     }
   }
   &__commentlist {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__selectedcomments {
     display: flex;
     border-bottom: 1px solid $silver2;
     padding: 16px;
+    @include tablet {
+      width: 85%;
+    }
   }
   &__userpic {
   }
@@ -75,7 +105,7 @@
     border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
   }
   &__avatar {
     border-radius: 50%;
@@ -91,10 +121,22 @@
   }
   &__username {
     font-weight: 600;
+    @include desktop {
+      font-size: 18px;
+    }
   }
   &__date {
     color: $silver1;
+    @include desktop {
+      font-size: 18px;
+    }
   }
   &__text {
+    @include tablet {
+      width: 90%;
+    }
+    @include desktop {
+      font-size: 18px;
+    }
   }
 }

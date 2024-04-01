@@ -30,21 +30,25 @@ function MainComment({ selectedComment }) {
         {selectedComment.comments.length} Comments
       </p>
       <div className="comment-section__wrapper">
-        <img
-          className="comment-section__image"
-          src={circleImg}
-          alt="Mohan Muruge"
-        />
-        <div className="comment-section__form">
-          <p className="comment-section__title">JOIN THE CONVERSATION</p>
-          <div className="comment-section__container">
-            <input
-              className="comment-section__commentform"
-              type="textarea"
-              placeholder="Add a new comment"
-            />
-            <div className="comment-section__btnwrapper">
-              <button className="comment-section__btn">COMMENT</button>
+        <div className="comment-section__groupdetails">
+          <img
+            className="comment-section__image"
+            src={circleImg}
+            alt="Mohan Muruge"
+          />
+          <div className="comment-section__form">
+            <p className="comment-section__title">JOIN THE CONVERSATION</p>
+            <div className="comment-section__container">
+              <div className="comment-section__groupitems">
+                <input
+                  className="comment-section__commentform"
+                  type="textarea"
+                  placeholder="Add a new comment"
+                />
+                <div className="comment-section__btnwrapper">
+                  <button className="comment-section__btn">COMMENT</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
