@@ -5,6 +5,7 @@
 .comment-section {
   &__count {
     font-weight: 600;
+    padding-left: 16px;
     @include tablet {
       padding-left: 16px;
     }
@@ -12,6 +13,7 @@
   &__wrapper {
     display: flex;
     justify-content: space-evenly;
+    border-bottom: 1px solid $silver2;
   }
   &__image {
     border-radius: 50%;
@@ -28,9 +30,10 @@
   }
   &__container {
     padding-bottom: 16px;
+    // display: flex;
   }
   &__commentform {
-    width: 250px;
+    width: 230px;
     height: 100px;
     border-radius: 4px;
     border: 1px solid $silver1;
@@ -39,9 +42,12 @@
       height: 40px;
     }
   }
+  &__btnwrapper {
+    padding-top: 16px;
+  }
   &__btn {
     height: 40px;
-    width: 250px;
+    width: 235px;
     border-radius: 4px;
     border: none;
     color: $white1;

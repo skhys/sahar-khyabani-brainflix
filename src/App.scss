@@ -3,12 +3,23 @@
 @use "./styles/partials/variables" as *;
 
 .main-wrapper {
+  width: 100%;
   @include desktop {
     display: flex;
   }
   &__info {
     @include desktop {
       padding: 24px;
+      width: 80%;
     }
   }
+  &__side {
+    @include desktop {
+      width: 20%;
+    }
+  }
+}
+
+* {
+  outline: 1px solid red;
 }

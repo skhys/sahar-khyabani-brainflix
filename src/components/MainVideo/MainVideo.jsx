@@ -5,7 +5,7 @@ function MainVideo({ selectedVideo }) {
   return (
     <>
       <div className="main-video">
-        <div className="main-video__poster">
+        <div className="main-video__container">
           <video
             className="main-video__thumbnail"
             controls

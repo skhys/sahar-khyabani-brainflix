@@ -43,7 +43,9 @@ function MainComment({ selectedComment }) {
               type="textarea"
               placeholder="Add a new comment"
             />
-            <button className="comment-section__btn">COMMENT</button>
+            <div className="comment-section__btnwrapper">
+              <button className="comment-section__btn">COMMENT</button>
+            </div>
           </div>
         </div>
       </div>
