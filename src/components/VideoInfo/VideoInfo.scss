@@ -40,7 +40,7 @@
     margin: 0;
     padding-bottom: 16px;
     @include desktop {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   &__item {
@@ -78,7 +78,7 @@
   &__likestext {
     margin: 0;
     @include desktop {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   &__description {
@@ -89,7 +89,7 @@
       font-size: 16px;
     }
     @include desktop {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 }

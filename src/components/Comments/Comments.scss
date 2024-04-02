@@ -133,13 +133,13 @@
   &__username {
     font-weight: 600;
     @include desktop {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   &__date {
     color: $silver1;
     @include desktop {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   &__text {
@@ -147,7 +147,7 @@
       width: 90%;
     }
     @include desktop {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 }
