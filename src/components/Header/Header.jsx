@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
-import BfLogo from "../../assets/Images/Logo/BrainFlix-logo.svg";
-import IconImg from "../../assets/Images/Mohan-muruge.jpg";
+import BfLogo from "../../assets/images/logo/BrainFlix-logo.svg";
+import IconImg from "../../assets/images/Mohan-muruge.jpg";
 
 function Header() {
   return (

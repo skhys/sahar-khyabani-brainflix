@@ -1,7 +1,7 @@
 import React from "react";
 import "./VideoInfo.scss";
-import ViewsImg from "../../assets/Images/Icons/views.svg";
-import LikesImg from "../../assets/Images/Icons/likes.svg";
+import ViewsImg from "../../assets/images/icons/views.svg";
+import LikesImg from "../../assets/images/icons/likes.svg";
 
 function VideoInfo({ selectedVideo }) {
   const date = new Date(selectedVideo.timestamp);

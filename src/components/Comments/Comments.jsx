@@ -1,7 +1,7 @@
 import React from "react";
 import "./Comments.scss";
-import circleImg from "../../assets/Images/Mohan-muruge.jpg";
-import defaultAvatar from "../../assets/Images/defaultAvatar.png";
+import circleImg from "../../assets/images/Mohan-muruge.jpg";
+import defaultAvatar from "../../assets/images/defaultAvatar.png";
 
 function MainComment({ selectedComment }) {
   if (
