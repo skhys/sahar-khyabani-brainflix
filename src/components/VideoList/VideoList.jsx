@@ -1,6 +1,6 @@
 import "./VideoList.scss";
 import videosData from "../../data/videos.json";
-
+import VideoItem from "../VideoItem/VideoItem";
 function VideoList(props) {
   const { videosData, selectedVideo, onChangeVideo } = props;
   const filteredVideos = videosData.filter(
@@ -12,23 +12,14 @@ function VideoList(props) {
       <h1 className="video-list__headertitle">NEXT VIDEOS</h1>
       <div className="video-list__details">
         {filteredVideos.map((video) => (
-          <div
+          <VideoItem
             key={video.id}
-            className="video-list__item"
-            onClick={() => {
-              onChangeVideo(video.id);
-            }}
-          >
-            <img
-              src={video.image}
-              alt={video.title}
-              className="video-list__thumbnail"
-            />
-            <div className="video-list__wrapper">
-              <h2 className="video-list__vidtitle">{video.title}</h2>
-              <p className="video-list__author">{video.channel}</p>
-            </div>
-          </div>
+            id={video.id}
+            image={video.image}
+            title={video.title}
+            channel={video.channel}
+            onChangeVideo={onChangeVideo}
+          />
         ))}
       </div>
     </div>

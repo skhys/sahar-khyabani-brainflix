@@ -1,40 +1,20 @@
 import { useState } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.scss";
 import Header from "./components/Header/Header";
-import MainVideo from "./components/MainVideo/MainVideo";
-import VideoDetails from "./data/video-details.json";
-import MainComment from "./components/Comments/Comments";
-import VideoList from "./components/VideoList/VideoList";
-import VideoInfo from "./components/VideoInfo/VideoInfo";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
-  const [selectedVideo, setSelectedVideo] = useState(VideoDetails[0]);
-
-  const onChangeVideo = (videoId) => {
-    const foundVideo = VideoDetails.find((video) => {
-      return video.id === videoId;
-    });
-    setSelectedVideo(foundVideo);
-  };
-
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <MainVideo selectedVideo={selectedVideo} />
-      <div className="main-wrapper">
-        <div className="main-wrapper__info">
-          <VideoInfo selectedVideo={selectedVideo} />
-          <MainComment selectedComment={selectedVideo} />
-        </div>
-        <div className="main-wrapper-side">
-          <VideoList
-            videosData={VideoDetails}
-            selectedVideo={selectedVideo}
-            onChangeVideo={onChangeVideo}
-          />
-        </div>
-      </div>
-    </>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="videos/:videoId" element={<HomePage />} />
+        {/* <Route path="/upload" element={<UploadPage />} /> */}
+        <Route path="*" element={<h1>404 not found</h1>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
