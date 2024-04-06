@@ -9,9 +9,9 @@ function MainVideo({ selectedVideo }) {
           <video
             className="main-video__thumbnail"
             controls
-            poster={selectedVideo.image}
+            poster={selectedVideo?.image}
           >
-            <source src={selectedVideo.video} />
+            <source src={selectedVideo?.video} />
           </video>
         </div>
       </div>
