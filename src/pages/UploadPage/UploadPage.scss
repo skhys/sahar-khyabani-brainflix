@@ -1,0 +1,31 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.upload-page {
+  &__title {
+  }
+
+  &__thumbnail {
+    &-title {
+    }
+    &-img {
+    }
+  }
+
+  &__form-container {
+    &-subtitle {
+    }
+    &-input {
+    }
+    &-input-description {
+    }
+    &-button {
+    }
+    &-button-cancel {
+    }
+  }
+
+  &__page-notification {
+  }
+}
