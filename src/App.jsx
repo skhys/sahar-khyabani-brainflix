@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
+import UploadPage from "./pages/UploadPage/UploadPage";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="videos/:videoId" element={<HomePage />} />
-        {/* <Route path="/upload" element={<UploadPage />} /> */}
+        <Route path="/upload" element={<UploadPage />} />
         <Route path="*" element={<h1>404 not found</h1>} />
       </Routes>
     </BrowserRouter>

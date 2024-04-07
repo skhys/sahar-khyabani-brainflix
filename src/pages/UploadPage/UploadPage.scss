@@ -4,28 +4,76 @@
 
 .upload-page {
   &__title {
+    border-top: 1px solid $silver2;
+    padding: 16px;
   }
 
   &__thumbnail {
     &-title {
+      font-weight: 600;
+      color: $silver1;
+      padding: 16px;
     }
     &-img {
+      height: 35vh;
+      max-width: 100%;
     }
   }
 
   &__form-container {
-    &-subtitle {
-    }
-    &-input {
-    }
-    &-input-description {
-    }
-    &-button {
-    }
-    &-button-cancel {
-    }
+  }
+  &__form-subtitle {
+    font-weight: 600;
+    color: $silver1;
+    padding: 16px;
+  }
+  &__form-input {
+    padding-right: 16px;
+  }
+  &__form-input-description {
+    padding: 16px;
+  }
+  &__form-button {
+    background-image: url(../../assets/images/icons/upload.svg);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-color: $blue1;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 270px;
+    color: $white1;
+    font-weight: $font1;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  &__form-button-cancel {
+    color: $blue1;
+    background-color: $white1;
+    border: none;
+    height: 40px;
+    width: 270px;
+    font-style: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
   }
 
   &__page-notification {
   }
+}
+
+.upload-page__form-button:hover {
+  background-color: $blue1;
+}
+
+.upload-page__form-button:active {
+  background-color: $blue2;
+}
+
+.upload-page__form-button-cancel:hover {
+  background-color: $white1;
+}
+
+.upload-page__form-button-cancel:active {
+  background-color: $blue1;
 }

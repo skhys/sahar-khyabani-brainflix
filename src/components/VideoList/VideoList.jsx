@@ -1,8 +1,7 @@
 import "./VideoList.scss";
-import videosData from "../../data/videos.json";
 import VideoItem from "../VideoItem/VideoItem";
 function VideoList(props) {
-  const { videosData, selectedVideo, onChangeVideo, filteredVideos } = props;
+  const { onChangeVideo, filteredVideos } = props;
 
   return (
     <div className="video-list__container">

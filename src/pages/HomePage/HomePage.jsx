@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import MainVideo from "../../components/MainVideo/MainVideo";
-//import VideoDetails from "../../data/video-details.json";
 import MainComment from "../../components/Comments/Comments";
 import VideoList from "../../components/VideoList/VideoList";
 import VideoInfo from "../../components/VideoInfo/VideoInfo";
