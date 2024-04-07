@@ -13,7 +13,7 @@ export default function HomePage() {
     title: "loading...",
   });
   const [allVideos, setAllVideos] = useState([]);
-  const params = useParams(); // parameters from url
+  const params = useParams();
   useEffect(() => {
     const fetchVideos = async () => {
       try {
