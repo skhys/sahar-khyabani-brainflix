@@ -21,7 +21,7 @@ function UploadPage() {
     return (
       <div className="upload-page">
         <h1 className="upload-page__title">Upload Video</h1>
-        <div className="upload-page__thumbnail-wrapper">
+        <div className="upload-page__thumbnail">
           <label className="upload-page__thumbnail-title">
             VIDEO THUMBNAIL
           </label>

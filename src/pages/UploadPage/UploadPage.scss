@@ -3,35 +3,54 @@
 @use "../../styles/partials/typography" as *;
 
 .upload-page {
+  margin: 16px;
   &__title {
     border-top: 1px solid $silver2;
-    padding: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   &__thumbnail {
     &-title {
       font-weight: 600;
       color: $silver1;
-      padding: 16px;
+      margin-bottom: 10px;
+    }
+    &-container {
+      margin-top: 7px;
+      margin-bottom: 16px;
+      // height: ;
+      // max-width: 100%;
     }
     &-img {
-      height: 35vh;
+      height: 200px;
       max-width: 100%;
     }
   }
-
   &__form-container {
   }
   &__form-subtitle {
     font-weight: 600;
     color: $silver1;
-    padding: 16px;
+    margin-top: 16px;
   }
+  &__form-group-items {
+  }
+
   &__form-input {
-    padding-right: 16px;
+    color: $black1;
+    padding-right: 75px;
+    margin-top: 7px;
+    margin-bottom: 16px;
   }
+  &__form-wrapper {
+  }
+
   &__form-input-description {
     padding: 16px;
+    padding-right: 61px;
+    margin-top: 7px;
+    margin-bottom: 16px;
   }
   &__form-button {
     background-image: url(../../assets/images/icons/upload.svg);
@@ -41,7 +60,7 @@
     border-radius: 4px;
     border: none;
     height: 40px;
-    width: 270px;
+    width: 293px;
     color: $white1;
     font-weight: $font1;
     cursor: pointer;
@@ -52,14 +71,17 @@
     background-color: $white1;
     border: none;
     height: 40px;
-    width: 270px;
+    width: 293px;
     border-radius: 4px;
     font-style: bold;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   &__page-notification {
+    margin: 16px;
   }
 }
 
