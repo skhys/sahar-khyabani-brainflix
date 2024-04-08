@@ -77,6 +77,11 @@ function UploadPage() {
                   placeholder="Add a description to your video"
                   required
                 />
+                {notification && (
+                  <div className="upload-page__page-notification">
+                    {notification}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -89,9 +94,6 @@ function UploadPage() {
             CANCEL
           </button>
         </div>
-        {notification && (
-          <div className="upload-page__page-notification">{notification}</div>
-        )}
       </form>
     </div>
   );
