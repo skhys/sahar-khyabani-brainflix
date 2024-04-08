@@ -28,10 +28,7 @@ export default function HomePage() {
           `${API_URL}/videos/${selectedVideoId}?api_key=${api_key}`
         );
         setSelectedVideoDetail(response2.data);
-        console.log(response2.data);
-      } catch (err) {
-        console.log("There is an error!!!!!");
-      }
+      } catch (err) {}
     };
     fetchVideos();
   }, [params.videoId]);
