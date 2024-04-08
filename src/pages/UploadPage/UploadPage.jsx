@@ -6,12 +6,10 @@ import VideoThumbnail from "../../assets/images/Upload-video-preview.jpg";
 function UploadPage() {
   const [notification, setNotification] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const [showForm, setShowForm] = useState(true);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setNotification("Video uploaded!");
-    setShowForm(false);
     setTimeout(() => {
       setSubmitted(true);
     }, 2000);
@@ -44,19 +42,21 @@ function UploadPage() {
   return (
     <div className="upload-page">
       <h1 className="upload-page__title">Upload Video</h1>
-      <div className="upload-page__thumbnail-wrapper">
-        <label className="upload-page__thumbnail-title">VIDEO THUMBNAIL</label>
-        <div className="upload-page__thumbnail-container">
-          <img
-            className="upload-page__thumbnail-img"
-            src={VideoThumbnail}
-            alt="video thumbnail"
-          />
-        </div>
-      </div>
-      <div className="upload-page__form-container">
-        {showForm && (
-          <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
+        <div className="upload-page__desktop-wrapper">
+          <div className="upload-page__thumbnail-wrapper">
+            <label className="upload-page__thumbnail-title">
+              VIDEO THUMBNAIL
+            </label>
+            <div className="upload-page__thumbnail-container">
+              <img
+                className="upload-page__thumbnail-img"
+                src={VideoThumbnail}
+                alt="video thumbnail"
+              />
+            </div>
+          </div>
+          <div className="upload-page__form-container">
             <label className="upload-page__form-subtitle">
               TITLE YOUR VIDEO
             </label>
@@ -78,24 +78,21 @@ function UploadPage() {
                   required
                 />
               </div>
-              <div className="upload-page__form-btn-wrapper">
-                <button type="submit" className="upload-page__form-button">
-                  PUBLISH
-                </button>
-                <button
-                  type="button"
-                  className="upload-page__form-button-cancel"
-                >
-                  CANCEL
-                </button>
-              </div>
             </div>
-          </form>
-        )}
+          </div>
+        </div>
+        <div className="upload-page__form-btn-wrapper">
+          <button type="submit" className="upload-page__form-button">
+            PUBLISH
+          </button>
+          <button type="button" className="upload-page__form-button-cancel">
+            CANCEL
+          </button>
+        </div>
         {notification && (
           <div className="upload-page__page-notification">{notification}</div>
         )}
-      </div>
+      </form>
     </div>
   );
 }

@@ -19,7 +19,18 @@
       margin-bottom: 24px;
     }
   }
+  &__desktop-wrapper {
+    @include desktop {
+      display: flex;
+      width: 100%;
+    }
+  }
 
+  &__thumbnail-wrapper {
+    @include desktop {
+      margin-right: 24px;
+    }
+  }
   &__thumbnail {
     &-title {
       font-weight: 600;
