@@ -78,12 +78,17 @@ function UploadPage() {
                   required
                 />
               </div>
-              <button type="submit" className="upload-page__form-button">
-                PUBLISH
-              </button>
-              <button type="button" className="upload-page__form-button-cancel">
-                CANCEL
-              </button>
+              <div className="upload-page__form-btn-wrapper">
+                <button type="submit" className="upload-page__form-button">
+                  PUBLISH
+                </button>
+                <button
+                  type="button"
+                  className="upload-page__form-button-cancel"
+                >
+                  CANCEL
+                </button>
+              </div>
             </div>
           </form>
         )}

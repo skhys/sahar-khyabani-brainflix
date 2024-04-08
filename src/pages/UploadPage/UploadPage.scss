@@ -4,10 +4,20 @@
 
 .upload-page {
   margin: 16px;
+  @include tablet {
+    margin: 24px;
+  }
   &__title {
     border-top: 1px solid $silver2;
     padding-top: 16px;
     padding-bottom: 16px;
+    @include tablet {
+      border-bottom: 1px solid $silver2;
+      font-size: 33px;
+      padding-top: 50px;
+      padding-bottom: 40px;
+      margin-bottom: 24px;
+    }
   }
 
   &__thumbnail {
@@ -25,6 +35,9 @@
     &-img {
       height: 200px;
       max-width: 100%;
+      @include tablet {
+        height: 250px;
+      }
     }
   }
   &__form-container {
@@ -42,18 +55,35 @@
     padding-right: 75px;
     margin-top: 7px;
     margin-bottom: 16px;
+    @include tablet {
+      padding-right: 500px;
+    }
   }
   &__form-wrapper {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__form-input-description {
-    padding: 16px;
-    padding-right: 61px;
+    padding: 16px 77px 16px 0;
     margin-top: 7px;
     margin-bottom: 16px;
+    @include tablet {
+      padding-right: 500px;
+    }
+  }
+  &__form-btn-wrapper {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      border-top: 1px solid $silver2;
+    }
   }
   &__form-button {
-    background-image: url(../../assets/images/icons/upload.svg);
+    background-image: url(../../assets/images/icons/publish.svg);
     background-repeat: no-repeat;
     background-position: 10px center;
     background-color: $blue1;
@@ -65,6 +95,9 @@
     font-weight: $font1;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    @include tablet {
+      width: 200px;
+    }
   }
   &__form-button-cancel {
     color: $blue1;
@@ -78,6 +111,9 @@
     transition: background-color 0.3s, color 0.3s;
     margin-top: 16px;
     margin-bottom: 16px;
+    @include tablet {
+      width: 200px;
+    }
   }
 
   &__page-notification {
