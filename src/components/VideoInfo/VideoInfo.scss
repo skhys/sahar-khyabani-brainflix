@@ -20,6 +20,9 @@
     border-bottom: 1px solid $silver2;
     justify-content: space-evenly;
     @include tablet {
+      justify-content: space-between;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
   &__detail {
