@@ -5,9 +5,9 @@ import VideoList from "../../components/VideoList/VideoList";
 import VideoInfo from "../../components/VideoInfo/VideoInfo";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+
 export default function HomePage() {
-  const api_key = "123";
-  const API_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
+  const API_URL = "http://localhost:8080/";
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [selectedVideoDetail, setSelectedVideoDetail] = useState({
     title: "loading...",
@@ -17,15 +17,13 @@ export default function HomePage() {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await axios.get(
-          `${API_URL}/videos?api_key=${api_key}`
-        );
+        const response = await axios.get(`${API_URL}videos/`);
         const videos = response.data;
         const selectedVideoId = params.videoId ? params.videoId : videos[0].id;
         setAllVideos(videos);
         setSelectedVideo(videos.find((video) => video.id === selectedVideoId));
         const response2 = await axios.get(
-          `${API_URL}/videos/${selectedVideoId}?api_key=${api_key}`
+          `${API_URL}videos/${selectedVideoId}`
         );
         setSelectedVideoDetail(response2.data);
       } catch (err) {}
