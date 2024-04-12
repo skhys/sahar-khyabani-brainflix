@@ -1,18 +1,45 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
+import axios from "axios";
 import "./UploadPage.scss";
 import VideoThumbnail from "../../assets/images/Upload-video-preview.jpg";
 
 function UploadPage() {
+  const [formData, setFormData] = useState({
+    title: "",
+    description: "",
+    // channel: "Best TA Ever",
+    // image: VideoThumbnail,
+    // views: "604,865",
+    // likes: "57,809",
+    // duration: "5:51",
+    // timestamp: 1692854262000,
+    // comments: [""],
+  });
   const [notification, setNotification] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setNotification("Video uploaded!");
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 2000);
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/videos",
+        formData
+      );
+      console.log("Response:", response);
+      setNotification("Video uploaded!");
+      setTimeout(() => {
+        setSubmitted(true);
+      }, 2000);
+    } catch (error) {
+      console.error("Error uploading video:", error);
+      setNotification("Error uploading video. Please try again.");
+    }
   };
 
   if (submitted) {
@@ -66,6 +93,9 @@ function UploadPage() {
                 type="text"
                 placeholder="Add a title to your video"
                 required
+                name="title"
+                value={formData.title}
+                onChange={handleChange}
               />
               <div className="upload-page__form-wrapper">
                 <label className="upload-page__form-subtitle">
@@ -76,6 +106,9 @@ function UploadPage() {
                   type="text"
                   placeholder="Add a description to your video"
                   required
+                  name="description"
+                  value={formData.description}
+                  onChange={handleChange}
                 />
                 {notification && (
                   <div className="upload-page__page-notification">
