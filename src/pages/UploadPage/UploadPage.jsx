@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import axios from "axios";
 import "./UploadPage.scss";
 import VideoThumbnail from "../../assets/images/Upload-video-preview.jpg";
@@ -122,9 +122,11 @@ function UploadPage() {
           <button type="submit" className="upload-page__form-button">
             PUBLISH
           </button>
-          <button type="button" className="upload-page__form-button-cancel">
-            CANCEL
-          </button>
+          <Link to="/">
+            <button type="button" className="upload-page__form-button-cancel">
+              CANCEL
+            </button>
+          </Link>
         </div>
       </form>
     </div>
