@@ -5,16 +5,16 @@ import "./UploadPage.scss";
 import VideoThumbnail from "../../assets/images/Upload-video-preview.jpg";
 
 function UploadPage() {
+  const imageUrl = "http://localhost:8080/images/image0.jpg";
   const [formData, setFormData] = useState({
     title: "",
     description: "",
-    // channel: "Best TA Ever",
-    // image: VideoThumbnail,
-    // views: "604,865",
-    // likes: "57,809",
-    // duration: "5:51",
-    // timestamp: 1692854262000,
-    // comments: [""],
+    channel: "Best TA Ever",
+    image: imageUrl,
+    views: "604,865",
+    likes: "57,809",
+    timestamp: 1692854262000,
+    comments: [""],
   });
   const [notification, setNotification] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -31,7 +31,6 @@ function UploadPage() {
         "http://localhost:8080/videos",
         formData
       );
-      console.log("Response:", response);
       setNotification("Video uploaded!");
       setTimeout(() => {
         setSubmitted(true);
@@ -53,7 +52,7 @@ function UploadPage() {
           <div className="upload-page__thumbnail-container">
             <img
               className="upload-page__thumbnail-img"
-              src={VideoThumbnail}
+              src={imageUrl}
               alt="video thumbnail"
             />
           </div>
