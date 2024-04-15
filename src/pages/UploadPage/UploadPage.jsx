@@ -15,30 +15,30 @@ function UploadPage() {
     likes: "57,809",
     timestamp: 1692854262000,
     comments: [
-      // {
-      //   id: "10",
-      //   name: "Josy Li",
-      //   comment:
-      //     "I feel like I've traveled to the ends of the Earth from the comfort of my home. Thank you for sharing these captivating stories!",
-      //   likes: 8,
-      //   timestamp: 1678083462000,
-      // },
-      // {
-      //   id: "10",
-      //   name: "Steven Faliszewski",
-      //   comment:
-      //     "While I appreciate the perspective, I would have loved more details on the discoveries made during these explorations. Perhaps a follow-up video could provide a more comprehensive view.",
-      //   likes: 6,
-      //   timestamp: 1677997062000,
-      // },
-      // {
-      //   id: "10",
-      //   name: "Jayme Liao",
-      //   comment:
-      //     "Your channel is my go-to source for staying updated on tech trends. The exploration of AI's future implications is both informative and exciting. Kudos on another excellent video!",
-      //   likes: 5,
-      //   timestamp: 1691558262000,
-      // },
+      {
+        id: "10000",
+        name: "Josy Li",
+        comment:
+          "I feel like I've traveled to the ends of the Earth from the comfort of my home. Thank you for sharing these captivating stories!",
+        likes: 8,
+        timestamp: 1678083462000,
+      },
+      {
+        id: "100",
+        name: "Steven Faliszewski",
+        comment:
+          "While I appreciate the perspective, I would have loved more details on the discoveries made during these explorations. Perhaps a follow-up video could provide a more comprehensive view.",
+        likes: 6,
+        timestamp: 1677997062000,
+      },
+      {
+        id: "1000",
+        name: "Jayme Liao",
+        comment:
+          "Your channel is my go-to source for staying updated on tech trends. The exploration of AI's future implications is both informative and exciting. Kudos on another excellent video!",
+        likes: 5,
+        timestamp: 1691558262000,
+      },
     ],
   });
   const [notification, setNotification] = useState("");

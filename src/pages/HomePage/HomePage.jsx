@@ -15,6 +15,7 @@ export default function HomePage() {
   const [allVideos, setAllVideos] = useState([]);
   const params = useParams();
   useEffect(() => {
+    document.title = "BrainFlix";
     const fetchVideos = async () => {
       try {
         const response = await axios.get(`${API_URL}videos/`);
